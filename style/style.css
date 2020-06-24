@@ -137,9 +137,10 @@ header .container {
 }
 
 .container {
-  width: 80%;
-  max-width: 1100px;
+  width: 90%;
+  max-width: 900px;
   margin: auto;
+  padding: 0 12px;
 }
 
 nav {
@@ -319,7 +320,7 @@ h1 {
   padding-top: 0px;
   box-shadow: 2px 2px 10px #d1d1d1;
   position: relative;
-  max-width: 935px;
+  /* max-width: 935px; */
   margin-left: auto;
   margin-right: auto;
 }
@@ -382,10 +383,15 @@ h1 {
 .contact,
 .rsv {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
-  max-width: 935px;
+  /* max-width: 935px; */
   margin: auto;
+}
+
+.rsv,
+.contact {
+  justify-content: space-between;
 }
 
 .dinner,
@@ -395,7 +401,7 @@ h1 {
 
 .first,
 .second {
-  width: 450px;
+  width: 350px;
 }
 
 .first {
@@ -462,7 +468,7 @@ h1 {
 }
 
 .imgs-container {
-  width: 85%;
+  /* width: 85%; */
   margin: auto;
   overflow: hidden;
   background-color: #333333;
@@ -527,6 +533,7 @@ h1 {
 .rsv-img {
   width: 100%;
   max-width: 420px;
+  margin-left: 20px;
 }
 
 .ta {
@@ -695,6 +702,8 @@ form span {
 
 .contact-info {
   line-height: 2;
+  width: 100%;
+  max-width: 420px;
 }
 
 .contact-info span {
@@ -864,15 +873,18 @@ footer .container {
 
   .map {
     order: 2;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    height: 100%;
+    max-width: 420px;
+    /* margin-left: auto;
+    margin-right: auto; */
   }
 
-  .map iframe {
+  /* .map iframe {
     width: 100%;
-    height: 250px;
-  }
+    height: 339px;
+    max-width: 420px;
+  } */
 
   .contact-info {
     margin: auto;
@@ -966,6 +978,20 @@ footer .container {
 
   .welcome h1 {
     font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 955px) {
+  .contact-info {
+    max-width: 380px;
+  }
+  .rsv-img {
+    margin: 20px 0 0 0;
+    max-width: 380px;
+  }
+
+  .map {
+    margin-left: 20px;
   }
 }
 
@@ -1266,6 +1292,10 @@ footer .container {
 
   .imgs-container {
     width: 95%;
+  }
+
+  .message {
+    height: 60px;
   }
 }
 

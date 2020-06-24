@@ -242,8 +242,10 @@ include "handle_form.php";
 
                          <section class="imgs-container">
                               <section class="imgs">
-                                   <img src="imgs/chef-cooking-in-kitchen-2544829.jpg" alt="">
-                                   <img src="imgs/men-wearing-a-black-lapel-in-a-store-2537605.jpg" alt="">
+                                   <img src="imgs/person-holding-sushi-on-black-plate-1422384.jpg" alt="">
+                                   <img src="imgs/vegetable-pizza-3570074.jpg" alt="">
+                                   <img src="imgs/selective-focus-photography-of-beef-steak-with-sauce-675951.jpg" alt="">
+                                   <img src="imgs/grilled-meat-with-green-ladies-finger-vegetable-on-white-1247677.jpg" alt="">
 
                                    <i class="right fas fa-chevron-right"></i>
                                    <i class="left fas fa-chevron-left"></i>
