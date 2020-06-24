@@ -308,7 +308,7 @@ h1 {
 
 #menu {
   padding-bottom: 100px;
-  padding-top: 150px;
+  padding-top: 100px;
 }
 
 .menu {
@@ -463,8 +463,8 @@ h1 {
 }
 
 #gallery {
-  margin-bottom: 50px;
-  margin-top: 50px;
+  margin-bottom: 100px;
+  margin-top: 80px;
 }
 
 .imgs-container {
@@ -509,7 +509,7 @@ h1 {
 
 #reservation {
   padding-top: 80px;
-  padding-bottom: 80px;
+  padding-bottom: 100px;
 }
 
 .reserved {
@@ -696,7 +696,7 @@ form span {
 }
 
 #contact {
-  padding-top: 60px;
+  padding-top: 80px;
   padding-bottom: 100px;
 }
 
@@ -954,7 +954,7 @@ footer .container {
 
   .rsv {
     justify-content: center;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
   }
 
   .call {
@@ -985,8 +985,13 @@ footer .container {
   .contact-info {
     max-width: 380px;
   }
+
+  .contact-info p {
+    font-size: 16px;
+  }
+
   .rsv-img {
-    margin: 20px 0 0 0;
+    margin: 20px 0 0 10px;
     max-width: 380px;
   }
 
@@ -1002,6 +1007,25 @@ footer .container {
 }
 
 @media only screen and (max-width: 768px) {
+  #gallery {
+    margin-bottom: 50px;
+    margin-top: 40px;
+  }
+
+  #reservation,
+  #contact,
+  #menu {
+    padding-top: 40px !important;
+    padding-bottom: 50px !important;
+  }
+  .rsv {
+    flex-wrap: wrap;
+  }
+
+  .rsv-img {
+    margin-left: 0;
+  }
+
   .first .info {
     margin-right: 0px;
   }
@@ -1202,17 +1226,6 @@ footer .container {
   .map iframe {
     width: 100%;
     height: 250px;
-  }
-
-  #contact,
-  #reservation,
-  #menu {
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-
-  #contact {
-    padding-top: 35px;
   }
 
   .map {
