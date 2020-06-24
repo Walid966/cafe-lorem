@@ -37,7 +37,7 @@ include "handle_form.php";
 <head>
      <meta charset="UTF-8" />
      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <meta name="description" content="eatWell Cafe restaurant pizzeria - Marjane Berkane" />
+     <meta name="description" content="eatWell | Cafe restaurant pizzeria" />
      <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
      <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
      <script src="https://kit.fontawesome.com/ba3779d8d2.js" crossorigin="anonymous"></script>
