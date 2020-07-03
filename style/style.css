@@ -656,6 +656,12 @@ h1 {
   background-size: cover;
 }
 
+.imgs img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
 .right,
 .left {
   position: absolute;
@@ -1236,10 +1242,10 @@ footer .container {
     height: 300px;
   }
 
-  .imgs img {
+  /* .imgs img {
     margin: 0 auto;
     width: 100%;
-  }
+  } */
 
   .right,
   .left {
