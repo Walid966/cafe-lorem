@@ -59,7 +59,7 @@ include "handle_form.php";
             <p class="err-msg">
                 <?php echo htmlspecialchars($adminErr); ?>
             </p>
-            <input class="name" type="text" name="email" id="email" placeholder="Nom d'utilisateur">
+            <input class="name" type="text" name="username" id="username" placeholder="Nom d'utilisateur">
             <input class="name" type="password" name="password" id="password" placeholder="Mot de passe">
 
             <input class="btn sign" name="login-submit" type="submit" value="Connexion">

@@ -147,19 +147,19 @@ if (isset($_POST["login-submit"])) {
     // mysqli_query($conn, $sql_insert);
 
     $adminErr = "";
-    $adminEmail = mysqli_real_escape_string($conn, $_POST["email"]);
+    $userName = mysqli_real_escape_string($conn, $_POST["username"]);
     $adminPwd = mysqli_real_escape_string($conn, $_POST["password"]);
 
     $sql_exe = mysqli_query($conn, "SELECT * FROM admin");
     $result = mysqli_fetch_all($sql_exe, MYSQLI_ASSOC);
 
     foreach ($result as $row) {
-        if ($adminEmail !== $row["email"] || $adminPwd !== "cafe") {
-            $adminErr = "Email ou mot de passe incorrect";
+        if ($userName !== $row["username"] || $adminPwd !== "cafe") {
+            $adminErr = "Nom ou mot de passe incorrect";
         }
 
-        if ($adminEmail === $row["email"] && $adminPwd === "cafe") {
-            $_SESSION['username'] = $row["email"];
+        if ($userName === $row["username"] && $adminPwd === "cafe") {
+            $_SESSION['username'] = $row["username"];
             $_SESSION['password'] = "cafe";
             header("location: admin-page.php");
         }
