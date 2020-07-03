@@ -61,9 +61,9 @@ include "handle_form.php";
                          <ul class="nav-bar" id="nav-bar">
                               <li><a href="#menu" class="nav-links">Menu</a></li>
                               <li><a href="#contact" class="nav-links">Contact</a></li>
-                              <li><a href="#gallery" class="nav-links">Galerie</a></li>
+                              <li><a href="#gallery" class="nav-links">Gallery</a></li>
                               <li><a class="nav-tel" href="tel:0000000000"><i class="fas fa-phone-alt"></i> 0123456789</a></li>
-                              <li><a href="#reservation" class="btn-p">Réservation</a></li>
+                              <li><a href="#reservation" class="btn-p">Reservation</a></li>
                               <li class="copy-right">
                                    <p class="copy-right">
                                         <a class="fb" href="https://www.facebook.com" target="_blank">
@@ -240,7 +240,7 @@ include "handle_form.php";
                <!-- Gallery -->
                <article id="gallery">
                     <div class="container">
-                         <h2 class="gal">Galerie</h2>
+                         <h2 class="gal">Gallery</h2>
 
                          <section class="imgs-container">
                               <section class="imgs">
@@ -322,13 +322,13 @@ include "handle_form.php";
                               <form action="index.php#contact" method="POST">
                                    <p class="sent"><?php echo htmlspecialchars($sent); ?></p>
 
-                                   <input class="name input" type="text" name="name" id="name" placeholder="Nom" value="<?php echo htmlspecialchars($name); ?>">
+                                   <input class="name input" type="text" name="name" id="name" placeholder="Name" value="<?php echo htmlspecialchars($name); ?>">
                                    <p class="err-msg"> <?php echo htmlspecialchars($errors["nameErr"]); ?></p>
 
                                    <input class="email input" type="text" name="email" id="email" placeholder="Email" value="<?php echo htmlspecialchars($email); ?>">
                                    <p class="err-msg"> <?php echo htmlspecialchars($errors["emailErr"]); ?></p>
 
-                                   <input class="subject input" type="text" name="subject" id="subject" placeholder="Objet" value="<?php echo htmlspecialchars($subject); ?>">
+                                   <input class="subject input" type="text" name="subject" id="subject" placeholder="Subject" value="<?php echo htmlspecialchars($subject); ?>">
                                    <p class="err-msg"> <?php echo htmlspecialchars($errors["subjectErr"]); ?></p>
 
                                    <textarea class="message" name="message" id="message" placeholder="Message"><?php echo htmlspecialchars($message); ?></textarea>
