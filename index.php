@@ -244,6 +244,12 @@ include "handle_form.php";
 
                          <section class="imgs-container">
                               <section class="imgs">
+                                   <img src="imgs/close-up-of-hand-holding-cappuccino-302901.jpg" alt="">
+                                   <img src="imgs/sliced-pepperoni-pizza-on-white-ceramic-plate-708587.jpg" alt="">
+                                   <img src="imgs/appetizer-avocado-bacon-cuisine-551997.jpg" alt="">
+                                   <img src="imgs/blur-breakfast-close-up-dairy-product-376464.jpg" alt="">
+                                   <img src="imgs/burrito-chicken-delicious-dinner-461198.jpg" alt="">
+                                   <img src="imgs/grilled-salmon-fish-on-rectangular-black-ceramic-plate-842142.jpg" alt="">
                                    <img src="imgs/person-holding-sushi-on-black-plate-1422384.jpg" alt="">
                                    <img src="imgs/vegetable-pizza-3570074.jpg" alt="">
                                    <img src="imgs/selective-focus-photography-of-beef-steak-with-sauce-675951.jpg" alt="">
