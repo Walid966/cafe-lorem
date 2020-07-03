@@ -599,7 +599,7 @@ h1 {
 }
 
 .mid {
-  border-bottom: 1px dashed red;
+  border-bottom: 1px dotted red;
   flex-grow: 1;
   align-self: center;
 }
