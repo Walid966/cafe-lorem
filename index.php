@@ -34,7 +34,7 @@ include "handle_form.php";
 ?>
 
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
      <meta charset="UTF-8" />
@@ -74,7 +74,7 @@ include "handle_form.php";
                                         <script>
                                              document.write(new Date().getFullYear());
                                         </script>
-                                        eatWell Tous droits réservés
+                                        eatWell All rights reserved
                                    </p>
                               </li>
                          </ul>
@@ -90,14 +90,14 @@ include "handle_form.php";
           <main id="home">
                <section class="welcome">
                     <h1>
-                         Bienvenue chez eatWell!
+                         Welcome at eatWell!
                     </h1>
                     <p>
                          CAFE - RESTAURANT - PIZZERIA
                     </p>
                     <div class="btns">
                          <a href="#menu" class="btn-p">Menu</a>
-                         <a href="#reservation" class="btn-p">Réservation</a>
+                         <a href="#reservation" class="btn-p">Reservation</a>
                     </div>
                </section>
 
@@ -109,15 +109,15 @@ include "handle_form.php";
                               <div class="bld">
                                    <div class="bld-l">
                                         <img src="./img/kitchen-spoons.svg" width="30px" alt="Food plate" />
-                                        <h3 class="h3-lunch">Déjeuner</h3>
+                                        <h3 class="h3-lunch">Lunch</h3>
                                    </div>
                                    <div class="bld-b">
                                         <img src="./img/hot-tea.svg" width="30px" alt="Tea cup" />
-                                        <h3 class="h3-clicked h3-breakfast red">Petit déjeuner</h3>
+                                        <h3 class="h3-clicked h3-breakfast red">Breakfast</h3>
                                    </div>
                                    <div class="bld-d">
                                         <img src="./img/dish-cap-line.svg" width="40px" alt="Dinner" />
-                                        <h3 class="h3-dinner">Dîner</h3>
+                                        <h3 class="h3-dinner">Dinner</h3>
                                    </div>
                               </div>
                               <section class="breakfast">
@@ -271,7 +271,7 @@ include "handle_form.php";
                <!-- Reservation -->
                <article id="reservation">
                     <div class="container">
-                         <h2 class="center">Réservation</h2>
+                         <h2 class="center">Reservation</h2>
 
                          <section class="rsv">
                               <section class="contact-info">
@@ -297,7 +297,7 @@ include "handle_form.php";
                                         </p>
                                    </div>
                                    <div class="days">
-                                        <p>Ouverte du Lun au Sam 08:30 - 23:30</p>
+                                        <p>Open days Monday to Sunday, 08:30 - 23:30</p>
                                    </div>
                               </section>
                               <img class="rsv-img" src="imgs/table-in-vintage-restaurant-6267.jpg" alt="">
@@ -351,7 +351,7 @@ include "handle_form.php";
                          <script>
                               document.write(new Date().getFullYear());
                          </script>
-                         eatWell Tous droits réservés
+                         eatWell All rights reserved
                     </p>
                     <p class="dev">Created by <a href="https://walidelahmadi.com" target="_blank">WEA</a></p>
                </div>

@@ -58,7 +58,7 @@ include "handle_form.php";
         </a> -->
 
         <h1 class="center">eatWell | Admin</h1>
-        <a class="logout" href="index.php">Déconnexion <i class="fas fa-sign-out-alt"></i> </a>
+        <a class="logout" href="index.php">Log Out <i class="fas fa-sign-out-alt"></i> </a>
         <nav>
             <ul>
                 <!-- <li id="admin-menu">
@@ -80,12 +80,12 @@ include "handle_form.php";
                     <?php echo htmlspecialchars($name_price_err); ?>
                 </p>
                 <select name="meal" id="meal" class="meal">
-                    <option value="breakfast">Petit déjeuner</option>
-                    <option value="lunch">Déjeuner</option>
-                    <option value="dinner">Dîner</option>
+                    <option value="breakfast">Breakfast</option>
+                    <option value="lunch">Lunch</option>
+                    <option value="dinner">Dinner</option>
                 </select>
-                <input type="text" name="food_name" id="name" placeholder="Nom">
-                <input type="text" name="food_price" id="price" placeholder="Prix">
+                <input type="text" name="food_name" id="name" placeholder="Name">
+                <input type="text" name="food_price" id="price" placeholder="Price">
                 <textarea name="food_description" id="description" cols="30" rows="1" placeholder="description"></textarea>
 
                 <input class="btn" name="adminSubmit" type="submit" value="Ajouter">
@@ -97,17 +97,17 @@ include "handle_form.php";
                 <h2 class="h2-menu center">Menu</h2>
                 <section class="grey-menu #grey-menu">
                     <section class="grey-breakfast">
-                        <h2 class="center break">Petit déjeuner</h2>
+                        <h2 class="center break">Breakfast</h2>
                         <?php foreach ($food_breakfast as $fod) { ?>
                             <form method="POST" action="admin-page.php#grey-menu" class="emenu">
                                 <div class="info" name="info">
                                     <div>
                                         <div class="food">
-                                            <span class="bold"><?php echo htmlspecialchars("Nom: "); ?></span>
+                                            <span class="bold"><?php echo htmlspecialchars("Name: "); ?></span>
                                             <?php echo htmlspecialchars($fod["food_name"]); ?>
                                         </div>
                                         <div class="price">
-                                            <span class="bold"><?php echo htmlspecialchars("Prix: "); ?></span>
+                                            <span class="bold"><?php echo htmlspecialchars("Price: "); ?></span>
                                             <?php echo htmlspecialchars($fod["food_price"]) . " Dhs"; ?>
                                         </div>
                                     </div>
@@ -118,24 +118,24 @@ include "handle_form.php";
 
                                     <input type="hidden" name="b_id" value=" <?php echo $fod['id'] ?>">
 
-                                    <input name="breakDlt" class="btn-d" type="submit" value="Supprimer">
+                                    <input name="breakDlt" class="btn-d" type="submit" value="Delete">
                                 </div>
                             </form>
                         <?php } ?>
                     </section>
 
                     <section class="grey-dinner">
-                        <h2 class="center break">Dîner</h2>
+                        <h2 class="center break">Dinner</h2>
                         <?php foreach ($food_dinner as $fod) { ?>
                             <form method="POST" action="admin-page.php#grey-menu" class="emenu">
                                 <div class="info">
                                     <div>
                                         <div class="food">
-                                            <span class="bold"><?php echo htmlspecialchars("Nom: "); ?></span>
+                                            <span class="bold"><?php echo htmlspecialchars("Name: "); ?></span>
                                             <?php echo htmlspecialchars($fod["food_name"]); ?>
                                         </div>
                                         <div class="price">
-                                            <span class="bold"><?php echo htmlspecialchars("Prix: "); ?></span>
+                                            <span class="bold"><?php echo htmlspecialchars("Price: "); ?></span>
                                             <?php echo htmlspecialchars($fod["food_price"]) . " Dhs"; ?>
                                         </div>
                                     </div>
@@ -145,24 +145,24 @@ include "handle_form.php";
                                     </p>
 
                                     <input type="hidden" name="d_id" value=" <?php echo $fod['id'] ?>">
-                                    <input name="dinnerDlt" class="btn-d" type="submit" value="Supprimer">
+                                    <input name="dinnerDlt" class="btn-d" type="submit" value="Delete">
                                 </div>
                             </form>
                         <?php } ?>
                     </section>
 
                     <section class="grey-lunch">
-                        <h2 class="center break">Déjeuner</h2>
+                        <h2 class="center break">Lunch</h2>
                         <?php foreach ($food_lunch as $fod) { ?>
                             <form method="POST" action="admin-page.php#grey-menu" class="emenu">
                                 <div class="info">
                                     <div>
                                         <div class="food">
-                                            <span class="bold"><?php echo htmlspecialchars("Nom: "); ?></span>
+                                            <span class="bold"><?php echo htmlspecialchars("Name: "); ?></span>
                                             <?php echo htmlspecialchars($fod["food_name"]); ?>
                                         </div>
                                         <div class="price">
-                                            <span class="bold"><?php echo htmlspecialchars("Prix: "); ?></span>
+                                            <span class="bold"><?php echo htmlspecialchars("Price: "); ?></span>
                                             <?php echo htmlspecialchars($fod["food_price"]) . " Dhs"; ?>
                                         </div>
                                     </div>
@@ -172,7 +172,7 @@ include "handle_form.php";
                                     </p>
 
                                     <input type="hidden" name="l_id" value=" <?php echo $fod['id'] ?>">
-                                    <input name="lunchDlt" class="btn-d" type="submit" value="Supprimer">
+                                    <input name="lunchDlt" class="btn-d" type="submit" value="Delete">
                                 </div>
                             </form>
                         <?php } ?>

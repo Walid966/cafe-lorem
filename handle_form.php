@@ -9,7 +9,7 @@ $errors = ["nameErr" => "", "emailErr" => "", "subjectErr" => "", "messageErr" =
 if (isset($_POST["contactSubmit"])) {
     // check for name
     if (empty($_POST["name"])) {
-        $errors["nameErr"] = "Veuillez saisir votre nom";
+        $errors["nameErr"] = "This field is required";
     } else {
         $name = $_POST["name"];
         if (!preg_match("/^[a-z]{3,}[a-z ]*$/i", $name)) {
@@ -19,7 +19,7 @@ if (isset($_POST["contactSubmit"])) {
 
     // check for email
     if (empty($_POST["email"])) {
-        $errors["emailErr"] = "Veuillez saisir votre email";
+        $errors["emailErr"] = "This field is required";
     } else {
         $email = $_POST["email"];
         if (!preg_match("/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/", $email)) {
@@ -30,13 +30,13 @@ if (isset($_POST["contactSubmit"])) {
 
     // check for subject
     if (empty($_POST["subject"])) {
-        $errors["subjectErr"] = "Veuillez saisir un sujet";
+        $errors["subjectErr"] = "This field is required";
     } else {
         $subject = $_POST["subject"];
     }
 
     if (empty($_POST["message"])) {
-        $errors["messageErr"] = "Veuillez écrivez votre message";
+        $errors["messageErr"] = "This field is required";
     } else {
         $message = $_POST["message"];
     }
@@ -65,7 +65,7 @@ if (isset($_POST["contactSubmit"])) {
         $name = $email = $subject = $message =  "";
 
         if (mysqli_query($conn, $sql) && !array_filter($errors)) {
-            $sent = "Votre email a été envoyé";
+            $sent = "Your Email has been sent";
         } else {
             echo "error: " . mysqli_error($conn);
         }
@@ -84,10 +84,10 @@ if (isset($_POST["adminSubmit"])) {
         $food_price = $_POST["food_price"];
         $food_description = $_POST["food_description"];
     } else {
-        $name_price_err =  "ajouter un nom et un prix";
+        $name_price_err =  "Add name and price";
     }
 
-    if ($name_price_err !== "ajouter un nom et un prix") {
+    if ($name_price_err !== "Add name and price") {
         $sql1 = "INSERT INTO breakfast (`food_name`, `food_description`, `food_price`) 
                     VALUES('$food_name', '$food_description', '$food_price')";
         if ($meal === "breakfast") {
@@ -155,7 +155,7 @@ if (isset($_POST["login-submit"])) {
 
     foreach ($result as $row) {
         if ($userName !== $row["username"] || $adminPwd !== "cafe") {
-            $adminErr = "Nom ou mot de passe incorrect";
+            $adminErr = "incorrect name or password";
         }
 
         if ($userName === $row["username"] && $adminPwd === "cafe") {
