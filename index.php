@@ -1,4 +1,6 @@
 <?php
+session_start();
+session_destroy();
 
 // coonect to database
 include "db_connect.php";
@@ -308,16 +310,25 @@ include "handle_form.php";
                          <h2 class="h2-contact">Contact</h2>
                          <section class="contact">
                               <section class="map">
-                                   <iframe class="mp" frameborder="0" style="border: 0;" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ-ViRHYMjeA0R0BlGWA1h0EE&key=AIzaSyBAjapaahfRN1EpsiIWhRR6GWjISuFqoNw" allowfullscreen>
-                                   </iframe>
+                                   <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:EiVNYXJrZXQgU3QsIFN5ZG5leSBOU1cgMjAwMCwgQXVzdHJhbGlhIi4qLAoUChIJO1Nr_j6uEmsRmA-nK9oJ6GkSFAoSCT-Yix5ArhJrEcDMMhZofQEF&key=AIzaSyBAjapaahfRN1EpsiIWhRR6GWjISuFqoNw" allowfullscreen></iframe>
                               </section>
 
                               <form action="index.php#contact" method="POST">
-                                   <input class="name" type="text" name="name" id="name" placeholder="Nom">
-                                   <input class="email" type="text" name="email" id="email" placeholder="Email">
-                                   <input class="subject" type="text" name="subject" id="subject" placeholder="Objet">
-                                   <textarea class="message" name="message" id="message" cols="30" rows="5" placeholder="Message"></textarea>
-                                   <input class="btn-p" type="submit" value="Send Message">
+                                   <p class="sent"><?php echo htmlspecialchars($sent); ?></p>
+
+                                   <input class="name input" type="text" name="name" id="name" placeholder="Nom" value="<?php echo htmlspecialchars($name); ?>">
+                                   <p class="err-msg"> <?php echo htmlspecialchars($errors["nameErr"]); ?></p>
+
+                                   <input class="email input" type="text" name="email" id="email" placeholder="Email" value="<?php echo htmlspecialchars($email); ?>">
+                                   <p class="err-msg"> <?php echo htmlspecialchars($errors["emailErr"]); ?></p>
+
+                                   <input class="subject input" type="text" name="subject" id="subject" placeholder="Objet" value="<?php echo htmlspecialchars($subject); ?>">
+                                   <p class="err-msg"> <?php echo htmlspecialchars($errors["subjectErr"]); ?></p>
+
+                                   <textarea class="message" name="message" id="message" placeholder="Message"><?php echo htmlspecialchars($message); ?></textarea>
+                                   <p class="err-msg"> <?php echo htmlspecialchars($errors["messageErr"]); ?></p>
+
+                                   <input name=" contactSubmit" class="btn-p" type="submit" value="Send Message">
                               </form>
                          </section>
                     </div>

@@ -35,8 +35,8 @@ const copyRight = document.querySelector(".nav-bar .copy-right");
 // hide/show header onscroll
 let previous = window.scrollY;
 window.addEventListener("scroll", function () {
-  if (window.scrollY > previous && window.scrollY > 57) {
-    nav.style.top = "-57px";
+  if (window.scrollY > previous && window.scrollY > 69) {
+    nav.style.top = "-69px";
     nav.classList.remove("header-shadow");
   } else {
     nav.style.top = "0px";
@@ -114,7 +114,6 @@ bldB.addEventListener("click", function () {
 const names = {
   name: /^[a-z]{3,}[a-z ]*$/i,
   email: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
-  number: /^06\d{8}$/,
 };
 
 const inputs = document.querySelectorAll(".input");
@@ -136,18 +135,11 @@ inputs.forEach((input) => {
   });
 });
 
-// const x = document.querySelector(".x");
-// const res = document.querySelector(".res");
-// const conf = document.querySelector(".conf");
-// if (!conf.textContent) {
-//   res.style.display = "none";
-// } else {
-//   res.style.display = "flex";
-// }
-
-// x.addEventListener("click", function () {
-//   res.style.display = "none";
-// });
+// sent message
+const sent = document.querySelector(".sent");
+if (sent.innerHTML) {
+  sent.style.display = "block";
+}
 
 // Gallery
 const imgSlide = document.querySelector(".imgs");
@@ -155,6 +147,20 @@ const imgs = document.querySelectorAll(".imgs img");
 const left = document.querySelector(".left");
 const right = document.querySelector(".right");
 const size = imgs[0].clientWidth;
+
+imgSlide.addEventListener("mouseout", () => {
+  left.classList.remove("flexx");
+  left.classList.add("none");
+  right.classList.remove("flexx");
+  right.classList.add("none");
+});
+
+imgSlide.addEventListener("mouseover", () => {
+  left.classList.remove("none");
+  left.classList.add("flexx");
+  right.classList.remove("none");
+  right.classList.add("flexx");
+});
 
 let counter = 0;
 

@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 // coonect to database
 include "db_connect.php";
 
@@ -42,188 +42,29 @@ include "handle_form.php";
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/ba3779d8d2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style/style.css" />
-    <title>eatWell | Restaurant</title>
+    <title>eatWell | Sign in</title>
 </head>
 
 <html>
 
-<body class="grey">
-    <div class="container white mg-pd-tb">
-        <a href="#home" class="logo">
-            <!-- <img class="the-logo" src="img/theone.svg" width="290" alt="Restaurant logo" /> -->
-            eatWell | Admin
-        </a>
+<body class="grey admin">
+    <div class="container mg-pd-tb">
+        <!-- <a href="#home" class="logo">
+            <img class="the-logo" src="img/theone.svg" width="290" alt="Restaurant logo" />
+        </a> -->
 
-        <nav>
-            <ul>
-                <li id="admin-menu">
-                    Modifier menu <i class="fas fa-pencil-alt"></i>
-                </li>
-                <li id="admin-gallery">
-                    Modifier galerie <i class="fas fa-pencil-alt"></i>
-                </li>
-            </ul>
-        </nav>
+        <h1 class="center">eatWell | Admin</h1>
 
-        <!-- Menu -->
-        <section class="edit">
-            <form action="admin.php#menu">
-                <input type="text" name="name" id="name" placeholder="Nom">
-                <input type="text" name="price" id="price" placeholder="Prix">
-                <textarea name="description" id="description" cols="30" rows="1" placeholder="description"></textarea>
+        <form action="admin.php" method="POST">
+            <p class="err-msg">
+                <?php echo htmlspecialchars($adminErr); ?>
+            </p>
+            <input class="name" type="text" name="email" id="email" placeholder="Nom d'utilisateur">
+            <input class="name" type="password" name="password" id="password" placeholder="Mot de passe">
 
-                <input class="btn" type="submit" value="Ajouter">
-            </form>
-        </section>
+            <input class="btn sign" name="login-submit" type="submit" value="Connexion">
+        </form>
 
-        <article id="menu">
-            <div class="container">
-
-                <h2 class="center">Menu</h2>
-                <section class="menu">
-                    <div class="bld">
-                        <div class="bld-l">
-                            <img src="./img/kitchen-spoons.svg" width="30px" alt="Food plate" />
-                            <h3 class="h3-lunch">Déjeuner</h3>
-                        </div>
-                        <div class="bld-b">
-                            <img src="./img/hot-tea.svg" width="30px" alt="Tea cup" />
-                            <h3 class="h3-clicked h3-breakfast red">Petit déjeuner</h3>
-                        </div>
-                        <div class="bld-d">
-                            <img src="./img/dish-cap-line.svg" width="40px" alt="Dinner" />
-                            <h3 class="h3-dinner">Dîner</h3>
-                        </div>
-                    </div>
-                    <section class="breakfast">
-                        <div class="first">
-                            <?php foreach ($food_breakfast as $fod) { ?>
-                                <?php if ($fod["id"] % 2 != 0) { ?>
-                                    <div class="info">
-                                        <div class="flex">
-                                            <div class="food">
-                                                <?php echo htmlspecialchars($fod["food_name"]); ?>
-                                            </div>
-                                            <div class="mid"></div>
-                                            <div class="price"><?php echo htmlspecialchars($fod["food_price"]) . " Dhs"; ?> </div>
-                                        </div>
-                                        <p class="food-description">
-                                            <?php echo htmlspecialchars($fod["food_description"]); ?>
-                                        </p>
-                                    </div>
-                                <?php } ?>
-
-                            <?php } ?>
-                        </div>
-                        <div class="second">
-                            <?php foreach ($food_breakfast as $fod) { ?>
-                                <?php if ($fod["id"] % 2 == 0) { ?>
-                                    <div class="info">
-                                        <div class="flex">
-                                            <div class="food"><?php echo htmlspecialchars($fod["food_name"]); ?></div>
-                                            <div class="mid"></div>
-                                            <div class="price"><?php echo htmlspecialchars($fod["food_price"]) . " Dhs"; ?></div>
-                                        </div>
-                                        <p class="food-description">
-                                            <?php echo htmlspecialchars($fod["food_description"]); ?>
-                                        </p>
-                                    </div>
-                                <?php } ?>
-                            <?php } ?>
-                        </div>
-                    </section>
-
-                    <section class="lunch">
-                        <div class="first">
-                            <?php foreach ($food_lunch as $fod) { ?>
-                                <?php if ($fod["id"] % 2 != 0) { ?>
-                                    <div class="info">
-                                        <div class="flex">
-                                            <div class="food"><?php echo htmlspecialchars($fod["food_name"]); ?></div>
-                                            <div class="mid"></div>
-                                            <div class="price"><?php echo htmlspecialchars($fod["food_price"]) . " Dhs"; ?></div>
-                                        </div>
-                                        <p class="food-description">
-                                            <?php echo htmlspecialchars($fod["food_description"]); ?>
-                                        </p>
-                                    </div>
-                                <?php } ?>
-
-                            <?php } ?>
-                        </div>
-                        <div class="second">
-                            <?php foreach ($food_lunch as $fod) { ?>
-                                <?php if ($fod["id"] % 2 == 0) { ?>
-                                    <div class="info">
-                                        <div class="flex">
-                                            <div class="food"><?php echo htmlspecialchars($fod["food_name"]); ?></div>
-                                            <div class="mid"></div>
-                                            <div class="price"><?php echo htmlspecialchars($fod["food_price"]) . " Dhs"; ?></div>
-                                        </div>
-                                        <p class="food-description">
-                                            <?php echo htmlspecialchars($fod["food_description"]); ?>
-                                        </p>
-                                    </div>
-                                <?php } ?>
-                            <?php } ?>
-                        </div>
-                    </section>
-
-                    <section class="dinner">
-                        <div class="first">
-                            <?php foreach ($food_dinner as $fod) { ?>
-                                <?php if ($fod["id"] % 2 != 0) { ?>
-                                    <div class="info">
-                                        <div class="flex">
-                                            <div class="food"><?php echo htmlspecialchars($fod["food_name"]); ?></div>
-                                            <div class="mid"></div>
-                                            <div class="price"><?php echo htmlspecialchars($fod["food_price"]) . " Dhs"; ?></div>
-                                        </div>
-                                        <p class="food-description">
-                                            <?php echo htmlspecialchars($fod["food_description"]); ?>
-                                        </p>
-                                    </div>
-                                <?php } ?>
-
-                            <?php } ?>
-                        </div>
-                        <div class="second">
-                            <?php foreach ($food_dinner as $fod) { ?>
-                                <?php if ($fod["id"] % 2 == 0) { ?>
-                                    <div class="info">
-                                        <div class="flex">
-                                            <div class="food"><?php echo htmlspecialchars($fod["food_name"]); ?></div>
-                                            <div class="mid"></div>
-                                            <div class="price"><?php echo htmlspecialchars($fod["food_price"]) . " Dhs"; ?></div>
-                                        </div>
-                                        <p class="food-description">
-                                            <?php echo htmlspecialchars($fod["food_description"]); ?>
-                                        </p>
-                                    </div>
-                                <?php } ?>
-                            <?php } ?>
-                        </div>
-                    </section>
-                </section>
-            </div>
-        </article>
-
-        <!-- Galerie -->
-        <article class="hide" id="gallery">
-            <div class="container">
-                <h2 class="gal">Galerie</h2>
-
-                <section class="imgs-container">
-                    <section class="imgs">
-                        <img src="imgs/chef-cooking-in-kitchen-2544829.jpg" alt="">
-                        <img src="imgs/men-wearing-a-black-lapel-in-a-store-2537605.jpg" alt="">
-
-                        <i class="right fas fa-chevron-right"></i>
-                        <i class="left fas fa-chevron-left"></i>
-                    </section>
-                </section>
-            </div>
-        </article>
     </div>
 
     <script src="js/admin.js"></script>
