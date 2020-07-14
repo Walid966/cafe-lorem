@@ -13,7 +13,7 @@ if (isset($_POST["contactSubmit"])) {
     } else {
         $name = $_POST["name"];
         if (!preg_match("/^[a-z]{3,}[a-z ]*$/i", $name)) {
-            $errors["nameErr"] = "Veuillez écrire un nom valide";
+            $errors["nameErr"] = "Please write a valid name";
         }
     }
 
@@ -23,7 +23,7 @@ if (isset($_POST["contactSubmit"])) {
     } else {
         $email = $_POST["email"];
         if (!preg_match("/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/", $email)) {
-            $errors["emailErr"] = "Format d'email invalide";
+            $errors["emailErr"] = "Invalid email address";
         }
     }
 
