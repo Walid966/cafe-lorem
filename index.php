@@ -91,7 +91,7 @@ include "handle_form.php";
           <main id="home">
                <section class="welcome">
                     <h1>
-                         Welcome at Cafe Lorem!
+                         Welcome at cafe<span class="red">Lorem</span>!
                     </h1>
                     <p>
                          CAFE - RESTAURANT - PIZZERIA
