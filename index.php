@@ -75,7 +75,7 @@ include "handle_form.php";
                                         <script>
                                              document.write(new Date().getFullYear());
                                         </script>
-                                        Restaurant All rights reserved
+                                        cafeLorem All rights reserved
                                    </p>
                               </li>
                          </ul>
@@ -352,7 +352,7 @@ include "handle_form.php";
                          <script>
                               document.write(new Date().getFullYear());
                          </script>
-                         Restaurant All rights reserved
+                         cafeLorem All rights reserved
                     </p>
                     <p class="dev">Created by <a href="https://walidelahmadi.com" target="_blank">WEA</a></p>
                </div>
