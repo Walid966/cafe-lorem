@@ -35,8 +35,8 @@ const copyRight = document.querySelector(".nav-bar .copy-right");
 // hide/show header onscroll
 let previous = window.scrollY;
 window.addEventListener("scroll", function () {
-  if (window.scrollY > previous && window.scrollY > 69) {
-    nav.style.top = "-69px";
+  if (window.scrollY > previous && window.scrollY > 57) {
+    nav.style.top = "-57px";
     nav.classList.remove("header-shadow");
   } else {
     nav.style.top = "0px";
