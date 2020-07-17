@@ -301,7 +301,7 @@ include "handle_form.php";
                                         <p>Open days Monday to Sunday, 08:30 - 23:30</p>
                                    </div>
                               </section>
-                              <img class="rsv-img" src="imgs/table-in-vintage-restaurant-6267.jpg" alt="">
+                              <img class="rsv-img" src="../imgs/table-in-vintage-restaurant-6267.jpg" alt="">
                          </section>
                     </div>
                </article>
