@@ -39,13 +39,13 @@ include "handle_form.php";
 <head>
      <meta charset="UTF-8" />
      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <meta name="description" content="eatWell | Cafe restaurant pizzeria" />
+     <meta name="description" content="restaurant | Cafe restaurant pizzeria" />
      <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
      <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
      <script src="https://kit.fontawesome.com/ba3779d8d2.js" crossorigin="anonymous"></script>
      <link rel="stylesheet" href="style/style.css" />
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-     <title>eatWell | Restauran</title>
+     <title>restaurant | Restauran</title>
 </head>
 
 <body>
@@ -55,7 +55,8 @@ include "handle_form.php";
                     <nav>
                          <a href="#home" class="logo">
                               <!-- <img class="the-logo" src="img/theone.svg" width="290" alt="Restaurant logo" /> -->
-                              eat<span class="red">Well</span>
+                              <!-- eat<span class="red">Well</span> -->
+                              Restaurant
                          </a>
 
                          <ul class="nav-bar" id="nav-bar">
@@ -74,7 +75,7 @@ include "handle_form.php";
                                         <script>
                                              document.write(new Date().getFullYear());
                                         </script>
-                                        eatWell All rights reserved
+                                        Restaurant All rights reserved
                                    </p>
                               </li>
                          </ul>
@@ -90,7 +91,7 @@ include "handle_form.php";
           <main id="home">
                <section class="welcome">
                     <h1>
-                         Welcome at eatWell!
+                         Welcome at Restaurant!
                     </h1>
                     <p>
                          CAFE - RESTAURANT - PIZZERIA
@@ -286,7 +287,7 @@ include "handle_form.php";
                                         <i class="fas fa-envelope"></i>
                                         <p>
 
-                                             <a href="mailto:eatwell@eatwell.com">eatwell@eatwell.com</a>
+                                             <a href="mailto:restaurant@restaurant.com">restaurant@restaurant.com</a>
                                         </p>
                                    </div>
 
@@ -351,7 +352,7 @@ include "handle_form.php";
                          <script>
                               document.write(new Date().getFullYear());
                          </script>
-                         eatWell All rights reserved
+                         Restaurant All rights reserved
                     </p>
                     <p class="dev">Created by <a href="https://walidelahmadi.com" target="_blank">WEA</a></p>
                </div>
