@@ -55,8 +55,8 @@ include "handle_form.php";
                     <nav>
                          <a href="#home" class="logo">
                               <!-- <img class="the-logo" src="img/theone.svg" width="290" alt="Restaurant logo" /> -->
-                              <!-- eat<span class="red">Well</span> -->
-                              Restaurant
+                              cafe<span class="red">Lorem</span>
+
                          </a>
 
                          <ul class="nav-bar" id="nav-bar">
@@ -91,7 +91,7 @@ include "handle_form.php";
           <main id="home">
                <section class="welcome">
                     <h1>
-                         Welcome at Restaurant!
+                         Welcome at Cafe Lorem!
                     </h1>
                     <p>
                          CAFE - RESTAURANT - PIZZERIA
@@ -301,7 +301,7 @@ include "handle_form.php";
                                         <p>Open days Monday to Sunday, 08:30 - 23:30</p>
                                    </div>
                               </section>
-                              <img class="rsv-img" src="../imgs/table-in-vintage-restaurant-6267.jpg" alt="">
+                              <img class="rsv-img" src="imgs/table-in-vintage-restaurant-6267.jpg" alt="">
                          </section>
                     </div>
                </article>
